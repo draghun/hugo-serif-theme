@@ -32,11 +32,13 @@ theme = "hugo-serif-theme"
     base = "Source Sans Pro"
 
   [params.colors]
-    primary = "#f24088"
+    primary = "#f24088" #light-green
+    sub_prime = "#33ff77" #green
     black = "#2f2f41"
+    sub_black = "#6accff"
     white = "#ffffff"
-    white_offset = "#f6f7ff"
-    grey = "#5C5A5A"
+    white_offset = "#b3b3b3"
+    grey = "#808080"
 
   [params.seo]
     meta_twitter_site = "@zerostaticio"

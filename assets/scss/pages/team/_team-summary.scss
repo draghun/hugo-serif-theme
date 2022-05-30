@@ -21,10 +21,10 @@
       font-weight: normal;
     }
     p {
-      color: $black;
+      color: $white;
       text-transform: uppercase;
       margin: 0;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 500;
     }
   }
@@ -47,6 +47,12 @@
     img {
       width: 90px;
       height: auto;
+    }
+  }
+
+  .team-content {
+    p {
+      color: $white;
     }
   }
 }

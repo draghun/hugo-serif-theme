@@ -1,13 +1,17 @@
 .strip {
-  background: white;
+  background: $white;
   background-repeat: no-repeat;
 }
 .strip-white {
-  background-color: white;
+  background-color: $white;
 }
-.strip-grey {
+.strip-offset {
   background-color: $white-offset;
 }
+.strip-grey {
+  background-color: #ebebeb;
+}
+
 .strip-diagonal {
   transform: skewY(5deg);
   padding-bottom: 50px;

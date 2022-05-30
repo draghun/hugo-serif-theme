@@ -11,3 +11,42 @@
     }
   }
 }
+
+.service-summary {
+  background-color: $white-offset;
+  padding: 30px;
+  border-radius: 3px;
+  .service-image {
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 50%;
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .service-content {
+    flex: 1;
+    h2 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: normal;
+      a {
+        color: $primary;
+      }
+    }
+    a {
+      color: $sub-prime;
+    }
+    p {
+      color: $white;
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}

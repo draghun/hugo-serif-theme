@@ -1,8 +1,16 @@
 <div class="service service-summary">
+  {{ if .Params.image }}
+  <div class="service-image">
+    <img width="360" height="360" alt="Photo of {{ .Title }}" class="img-fluid mb-2" src="{{ .Params.image | relURL }}" />
+  </div>
+  {{ end }}
   <div class="service-content">
     <h2 class="service-title">
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
-    <p>{{ .Content | plainify | htmlUnescape | truncate 120 "…" }}</p>
+    {{range .Params.links }}
+        <a href="{{ .value | urlize }}">{{ .name }} | </a> 
+    {{end}}
+    <p>{{ .Content | plainify | htmlUnescape | truncate 240 "A" }}</p>
   </div>
 </div>
