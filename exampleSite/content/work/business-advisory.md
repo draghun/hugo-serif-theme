@@ -1,9 +1,10 @@
 ---
 title: "Business Advisory"
-date: 2018-11-28T15:14:39+10:00
+link: /work/business-advisory
+image: "images/illustrations/reading.svg"
 featured: true
 draft: false
-weight: 2
+weight: 1
 ---
 
 Lorem markdownum, dictis umbrosum dextrum, Lelegeia quamquam distantes pares

@@ -1,6 +1,15 @@
-<div class="summary">
-    <h2>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h2>
-    {{ .Content | truncate 120 "…" }}
+<div class="container" style="padding:3%">
+  {{ if .Params.image }}
+  <div style="padding-left:20%; padding-right:10%;">
+    <img
+      class="intro-image{{ if .Params.image_absolute }} image-absolute{{ end }}{{ if .Params.image_hide_on_mobile }} image-hide-mobile{{ end }}"
+      src="{{ .Params.image | relURL }}" />
+  </div>
+  {{ end }}
+  <h2 id="{{ lower .Title }}">
+    {{ .Title }}
+  </h2>
+  <div class="container" style="padding:30px; background-color:lightgray;">
+    {{ .Content }}
+  </div>
 </div>

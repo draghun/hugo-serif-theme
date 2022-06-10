@@ -4,14 +4,14 @@
 <div class="intro">
   <div class="container">
     <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+      <div class="col-12 col-md-6 col-lg-4 order-2 order-md-1">
         {{ .Content }}
         {{ if .Site.Params.homepage.show_contact_box }}
           {{ partial "call.html" (dict "site" .Site "context" . "show_button" "true") }}
         {{ end }}
       </div>
       {{ if .Params.intro_image }}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+      <div class="col-12 col-md-6 col-lg-4 order-1 order-md-2 position-relative">
         <img alt={{ .Title }} class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}" src="{{ .Params.intro_image | relURL }}" />
       </div>
       {{ end }}
@@ -19,16 +19,16 @@
   </div>
 </div>
 
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-{{if gt (len $services) 0}}
+{{ $work := where (where .Site.RegularPages "Type" "work") ".Params.featured" true }}
+{{if gt (len $work) 0}}
 <div class="strip strip-grey">
   <div class="container">
-    <h2 style="padding-top:60px">Services</h2>
-    <div class="container pt-6 pb-6 pb-md-10">
-      <div class="row justify-content-start">
-        {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-        {{ range first 6 (sort $services ".Params.weight") }}
-        <div class="col-12 col-md-4 mb-1">
+    <h2 style="padding-top:60px">Work</h2>
+    <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+      <div class="row justify-content-center">
+        {{ $work := where (where .Site.RegularPages "Type" "work") ".Params.featured" true }}
+        {{ range first 6 (sort $work ".Params.weight") }}
+        <div class="col-16 col-md-4 col-lg-5 mb-2">
           {{ .Render "summary" }}
         </div>
         {{ end }}
@@ -36,7 +36,7 @@
       {{ if not .Site.Params.homepage.show_services_button }}
       <div class="row justify-content-center">
         <div class="col-auto">
-          <a class="button button-primary" href="{{ "services/" | relURL }}">View All Services</a>
+          <a class="button button-primary" href="{{ "work/" | relURL }}">View All Work</a>
         </div>
       </div>
       {{ end }}
